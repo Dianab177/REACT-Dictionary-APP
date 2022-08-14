@@ -9,6 +9,9 @@ function App() {
      <div>Holas</div>
      <a href='/' className='btn btn-primary' rel='noopener noreferrer'>Chau</a>
       </header>
+      <footer className="text-center">
+        Made by Diana Borrajo
+      </footer>
     </div>
   );
 }
