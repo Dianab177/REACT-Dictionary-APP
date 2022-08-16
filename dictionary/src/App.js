@@ -7,14 +7,12 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <div>Holas</div>
-          <a href="/" className="btn btn-primary" rel="noopener noreferrer">
-            Chau
-          </a>
           <Dictionary/>
         </header>
       </div>
-      <footer className="footer text-center">Made by Diana Borrajo</footer>
+      <footer className="footer text-center">
+        <small>Made by Diana Borrajo</small>
+      </footer>
     </div>
   );
 }

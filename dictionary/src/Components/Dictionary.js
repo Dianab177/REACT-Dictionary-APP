@@ -6,9 +6,10 @@ const Dictionary = () => {
 
   function search(event) {
  event.preventDefault();
- alert('Searching');
+ alert(`Searching for ${keyword} definition`);
   }
   function handleKeyWordChange(event) {
+    setKeyword(event.target.value);
     console.log(event);
   }
   return (
@@ -16,7 +17,6 @@ const Dictionary = () => {
     <div className='dictionary'>
      <form onSubmit={search}>
       <input type="search"
-      autoFocus={true}
       onChange={handleKeyWordChange}/>
      </form>
     </div>
