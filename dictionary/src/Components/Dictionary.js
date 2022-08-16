@@ -3,34 +3,49 @@ import axios from "axios";
 import Results from "./Results";
 import "../Styles/Dictionary.css";
 
-const Dictionary = () => {
-  let [keyword, setKeyword] = useState("");
+const Dictionary = (props) => {
+  let [keyword, setKeyword] = useState(props.defaultKeyWord);
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setResults(response.data[0]);
   }
 
-  function search(event) {
-    event.preventDefault();
-    alert(`Searching for ${keyword} definition`);
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+  function search() {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
-
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+    }
   function handleKeyWordChange(event) {
     setKeyword(event.target.value);
   }
-  return (
-    <div className="container">
+
+  function load() {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
+    return (
       <div className="dictionary">
-        <form onSubmit={search}>
+        <section>
+        <form onSubmit={handleSubmit}>
           <input type="search" onChange={handleKeyWordChange} />
         </form>
+        <div className="hint">Suggested words: sunset, wine, yoga...</div>
+        </section>
         <Results results={results}/>
       </div>
-    </div>
   );
+  } else {
+    load();
+
+  }
+  
 };
 
 export default Dictionary;
