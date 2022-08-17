@@ -5,9 +5,8 @@ a{
   color: #9670f4;
 }
 .App {
-
-  padding: 30px 0;
-
+max-width: 960px;
+margin: 30px auto;
 }
 .footer{
   background-color: #282c34;
