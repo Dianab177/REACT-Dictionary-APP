@@ -1,8 +1,8 @@
 import React from "react";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
+import AudioPlayer from "./AudioPlayer";
 import "../Styles/Results.css";
-
 
 export default function Results(props) {
   if (props.results) {
@@ -14,6 +14,7 @@ export default function Results(props) {
             return (
               <div key={index}>
                 <Phonetic phonetic={phonetic} />
+                <AudioPlayer phonetic={phonetic} />
               </div>
             );
           })}
