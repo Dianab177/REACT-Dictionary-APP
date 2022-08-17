@@ -2,9 +2,10 @@
 font-size: 24px;
 line-height: 1.5;
 font-weight: bold;
+color:#b084da
 }
 .Meaning .example{
-  color: #70757a;
+  color: #edc8fa;
   font-style: italic;
   margin-top: 10px;
 }

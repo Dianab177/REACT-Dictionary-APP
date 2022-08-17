@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
+import dictionary from "../assets/dictionary.png";
 import "../Styles/Dictionary.css";
+
 
 const Dictionary = (props) => {
   let [keyword, setKeyword] = useState(props.defaultKeyWord);
@@ -43,11 +45,12 @@ const Dictionary = (props) => {
   if (loaded) {
     return (
       <div className="dictionary">
+        <img className="logo" src={dictionary} alt='logo'/>
         <section>
           <h1>What word do you want to look up?</h1>
         <form onSubmit={handleSubmit}>
           <input type="search" onChange={handleKeyWordChange}
-          defaultValue={props.defaultKeyWord} /></form>
+          defaultValue={props.defaultKeyWord} className="mb-2" /></form>
         <div className="hint">Suggested words: sunset, wine, yoga...</div>
         </section>
         <Results results={results}/>

@@ -1,5 +1,5 @@
 body{
-  background: #f9f8fe;
+  background: linear-gradient(90deg, rgb(52, 208, 224) 2%, rgb(0, 9, 10) 27%, rgb(0, 9, 10) 76%, rgb(139, 102, 241) 96%);
 }
 a{
   color: #9670f4;
@@ -10,7 +10,7 @@ margin: 30px auto;
 }
 .footer{
   background-color: #282c34;
-  color: #9670f4;
+  color: #ad92f1;
   margin: 30px 0;
   padding: 20px;
   border-top: solid 1px;
