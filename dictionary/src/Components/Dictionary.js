@@ -33,8 +33,11 @@ const Dictionary = (props) => {
     return (
       <div className="dictionary">
         <section>
+          <h1>What word do you want to look up?</h1>
         <form onSubmit={handleSubmit}>
-          <input type="search" onChange={handleKeyWordChange} />
+          <input type="search" onChange={handleKeyWordChange}
+          defaultValue={props.defaultKeyWord} />
+
         </form>
         <div className="hint">Suggested words: sunset, wine, yoga...</div>
         </section>
