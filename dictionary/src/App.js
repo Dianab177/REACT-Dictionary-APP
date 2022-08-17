@@ -11,7 +11,7 @@ function App() {
         </header>
       </div>
       <footer className="footer text-center">
-        <small>Made by Diana Borrajo</small>
+        <a href="https://github.com/Dianab177/REACT-Dictionary-APP.git" title="link to github" rel="noreferrer"><small>Made by Diana Borrajo</small></a>
       </footer>
     </div>
   );
