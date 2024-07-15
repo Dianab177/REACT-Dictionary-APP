@@ -1,5 +1,8 @@
 body{
-  background: linear-gradient(90deg, rgb(52, 208, 224) 2%, rgb(0, 9, 10) 27%, rgb(0, 9, 10) 76%, rgb(139, 102, 241) 96%);
+  margin: 48px auto;
+  background: black;
+  border: solid 1px #9670f4;
+  width: 80vw;
 }
 a{
   color: #9670f4;
